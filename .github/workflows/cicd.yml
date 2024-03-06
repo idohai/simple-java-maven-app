@@ -37,7 +37,7 @@ jobs:
         uses: eriknyk/increment-variable-action@v1.0.0
         with:
           id: version_code
-          name: 'VARIABLE'
+          name: 'VERSION'
           token: ${{ secrets.GIT_TOKEN }}
 
 
