@@ -38,6 +38,6 @@ jobs:
         with:
           id: version_code
           name: 'VARIABLE'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
 
 
