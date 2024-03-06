@@ -13,7 +13,7 @@ RUN mvn clean package
 FROM openjdk:11-jre-slim
 
 ARG VERSION
-ENV ENV-VERSION ${VERSION}
+ENV ENV-VERSION=${VERSION}
 
 WORKDIR /app
 
