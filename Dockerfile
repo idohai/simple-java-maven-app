@@ -13,10 +13,11 @@ RUN mvn clean package
 FROM openjdk:11-jre-slim
 
 ARG VERSION
-ENV ENV-VERSION=${VERSION}
+ENV ENV_VERSION ${VERSION}
 
 WORKDIR /app
 
 COPY --from=builder /app/target/ .
 EXPOSE 8080
-CMD ["java", "-jar", "my-app-${ENV-VERSION}.jar"]
+# CMD ["java", "-jar", "my-app-${ENV_VERSION}.jar"]
+CMD java -jar my-app-${ENV_VERSION}.jar
