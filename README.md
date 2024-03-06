@@ -18,3 +18,4 @@ the "Deliver" stage of your Pipeline.
 implement a CI/CD pipeline with GitHub Actions.
 event - push
 workflow: increase JAR and IMAGE patch version, build image and deliver to dockerhub registry
+
