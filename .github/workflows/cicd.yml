@@ -28,7 +28,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/simple_java:${{ vars.VERSION }}
-          build-args: VARIABLE=${{ vars.VERSION }}
+          build-args: VERSION=${{ vars.VERSION }}
   
   increment-version:
     runs-on: ubuntu-latest

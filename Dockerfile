@@ -19,5 +19,5 @@ WORKDIR /app
 
 COPY --from=builder /app/target/ .
 EXPOSE 8080
-# CMD ["java", "-jar", "my-app-${ENV_VERSION}.jar"]
-CMD java -jar my-app-${ENV_VERSION}.jar
+CMD ["java", "-jar", "my-app-${ENV_VERSION}.jar"]
+# CMD java -jar my-app-$ENV_VERSION.jar
