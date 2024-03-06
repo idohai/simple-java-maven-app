@@ -29,4 +29,15 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/simple_java:${{ vars.VERSION }}
           build-args: VARIABLE=${{ vars.VERSION }}
+  
+  increment-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Increment patch version
+        uses: eriknyk/increment-variable-action@v1.0.0
+        with:
+          id: version_code
+          name: 'VARIABLE'
+          token: ${{ secrets.DOCKERHUB_TOKEN }}
+
 
